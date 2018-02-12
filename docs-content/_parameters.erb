@@ -15,6 +15,7 @@ only lowercase alpha, numeric, and underscore characters.
 
 ##### Optional Parameters
 
+* **bloat\_check\_schedule**: Cron-specification for performing database bloat checking. Default is `@weekly`. Only valid if `monitoring` is `true`
 * **db_encoding**: Database encoding for the service database.
 It is not recommended to change this value unless specifically required.
 Default is `UTF8`.
