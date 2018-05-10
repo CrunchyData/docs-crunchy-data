@@ -4,9 +4,8 @@ owner: Crunchy Data
 ---
 
 <p class='note'>
-Every Information System utilizing Crunchy PostgreSQL Service is automatically configured to capture all necessary audit events described below.
-It is part of our automated verification process and no additional manual verification is required.
-</p>
+Every information system utilizing Crunchy PostgreSQL Service is automatically configured to capture all necessary audit events described below.
+It is part of our automated verification process and no additional manual verification is required.</p>
 
 ##<a id='Authentication-Events'></a> (1) Authentication Events
 
@@ -32,10 +31,7 @@ Example of the unsuccessful `Log-On` Audit Event (Fail Column)
 
 ##<a id='File-Events'></a> (2) File Events
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-User Accounts can't perform any File, Permission or Ownership Operations.
-</p>
+<p class='note warning'><strong>WARNING:</strong> User accounts cannot perform any file, permission, or ownership operations.</p>
 
 | Operation             | Object | STIG ID | NIST ID | Pass  | Fail  | INHERITED | HYBRID |
 | --------------------- | ------ | ------- |-------- | ----  | ----  | --------- | ------ |
@@ -95,12 +91,8 @@ Example of the unsuccessful `Access` Audit Event (Fail Column)
 
 ###<a id='Database-Object-Events-Access2'></a> (2a) Database Object Access via SELECT
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-To generate Audit Statements for each SELECT command pgaudit.log='READ' must be enabled.
-This will generate enormous amount of logging and is not enabled by default.
-Use discretion when enabling this option.
-</p>
+<p class='note warning'><strong>WARNING:</strong> To generate Audit Statements for each SELECT command, pgaudit.log='READ' must be enabled.
+This will generate enormous amount of logging and is not enabled by default. Use discretion when enabling this option.</p>
 
 | Operation     | Object      | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | ------------- | ----------- | ------- | -------- | ---- | ---- | --------- | ------ |
@@ -164,25 +156,19 @@ Example of the unsuccessful `Delete` Audit Event (Fail Column)
 | (6) Modify Ownership   | TRIGGER     |         |          | Y    | Y    | Y         |        |
 | (6) Modify Ownership   | VIEW        |         |          | Y    | Y    | Y         |        |
 
-##<a id='Database-External-Device-Access'></a> (4) Writes/downloads to external devices/media
+##<a id='Database-External-Device-Access'></a> (4) Writes/Downloads to External Devices/Media
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-User Accounts can not perform any writes/downloads to external devices/media Operations.
-</p>
+<p class='note warning'><strong>WARNING:</strong> User accounts cannot perform any writes/downloads to external devices/media operations.</p>
 
 
-##<a id='Database-External-Device-Upload'></a> (5) Uploads from external devices
+##<a id='Database-External-Device-Upload'></a> (5) Uploads from External Devices
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-User Accounts can not perform any Uploads from external devices Operations.
-</p>
+<p class='note warning'><strong>WARNING:</strong> User accounts cannot perform any uploads from external devices operations.</p>
 
 
-##<a id='user-events'></a> (6) User and Group Management events
+##<a id='user-events'></a> (6) User and Group Management Events
 
-###<a id='user-events1'></a> (1) User Management events
+###<a id='user-events1'></a> (1) User Management Events
 
 | Operation         | Object  | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | ----------------- | ------- | ------- | -------- | ---- | ---- | --------- | ------ |
@@ -192,7 +178,7 @@ User Accounts can not perform any Uploads from external devices Operations.
 | (4) User SUSPEND  |         |         |          | -    | -    | Y         |        |
 | (5) User LOCK     |         |         |          | Y    | Y    | Y         |        |
 
-###<a id='group-events'></a> (2) Group Management events
+###<a id='group-events'></a> (2) Group Management Events
 
 | Operation         | Object  | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | ----------------- | ------- | ------- | -------- | ---- | ---- | --------- | ------ |
@@ -202,36 +188,30 @@ User Accounts can not perform any Uploads from external devices Operations.
 | (4) Group SUSPEND |         |         |          | -    | -    | Y         |        |
 | (5) Group LOCK    |         |         |          | Y    | Y    | Y         |        |
 
-##<a id='Special-Rights'></a> (7) Use of Privileged/Special Rights events
+##<a id='Special-Rights'></a> (7) Use of Privileged/Special Rights Events
 
-###<a id='policy-changes'></a> (1) Security or audit policy changes
+###<a id='policy-changes'></a> (1) Security or Audit Policy Changes
 
 | Operation                        | Object  | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | -----------------                | ------- | ------- | -------- | ---- | ---- | --------- | ------ |
 | Security or audit policy changes |         |         |          | -    | -    | Y         |        |
 | Configuration changes            |         |         |          | -    | -    | Y         |        |
 
-##<a id='root-level'></a> (8) Admin or root-level access
+##<a id='root-level'></a> (8) Admin or Root-Level Access
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-User Accounts do not have Admin or Root level Access.
-</p>
+<p class='note warning'><strong>WARNING:</strong> User accounts do not have admin or root-level access.</p>
 
-##<a id='role-escalation'></a> (9) Privilege/Role escalation
+##<a id='role-escalation'></a> (9) Privilege/Role Escalation
 
 | Operation         | Object  | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | ----------------- | ------- | ------- | -------- | ---- | ---- | --------- | ------ |
 | Role escalation   |         |         |          | -    | -    | Y         |        |
 
-##<a id='log-access'></a> (10) Audit and log data accesses
+##<a id='log-access'></a> (10) Audit and Log Data Accesses
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-User Accounts do not have Access to the backend system and files
-</p>
+<p class='note warning'><strong>WARNING:</strong> User accounts do not have access to the backend system and files.</p>
 
-##<a id='system-reboot'></a> (11) System reboot, restart and shutdown
+##<a id='system-reboot'></a> (11) System Reboot, Restart and Shutdown
 
 | Operation   | Object  | STIG ID | NIST ID  | Pass | Fail | INHERITED | HYBRID |
 | ----------- | ------- | ------- | -------- | ---- | ---- | --------- | ------ |
@@ -239,37 +219,22 @@ User Accounts do not have Access to the backend system and files
 | RELOAD      |         |         |          | Y    |      | Y         |        |
 | RESTART     |         |         |          | Y    |      | Y         |        |
 
-##<a id='print'></a> (12) Print to a device
+##<a id='print'></a> (12) Print to a Device
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-System does not have Print to a device capability
-</p>
+<p class='note warning'><strong>WARNING:</strong> System does not have the ability to print to a device.</p>
 
-##<a id='print-to-file'></a> (13) Print to a file (e.g., pdf format)
+##<a id='print-to-file'></a> (13) Print to a File (e.g. PDF Format)
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-System does not have Print to a file capability
-</p>
+<p class='note warning'><strong>WARNING:</strong> System does not have the ability to print to a file.</p>
 
-##<a id='application'></a> (14) Application (e.g., Firefox, Internet Explorer, MS Office Suite, etc.) initialization
+##<a id='application'></a> (14) Application (e.g., Firefox, Internet Explorer, MS Office Suite, etc.) Initialization
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-System does not have Application initialization capability
-</p>
+<p class='note warning'><strong>WARNING:</strong> System does not have the ability to initialize applications.</p>
 
-##<a id='export'></a> (15) Export of information include (e.g., to CDRW, thumb drives, or remote systems)
+##<a id='export'></a> (15) Export of Information Include (e.g. to CDRW, thumb drives, or remote systems)
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-System does not have Export of information capability
-</p>
+<p class='note warning'><strong>WARNING:</strong>System does not have the ability to export information.</p>
 
-##<a id='import'></a> (16) Import of information include (e.g., from CDRW, thumb drives, or remote systems)
+##<a id='import'></a> (16) Import of Information Include (e.g., from CDRW, thumb drives, or remote systems)
 
-<p class='note warning'>
-<strong>IMPORTANT! </strong>
-System does not have Import of information capability
-</p>
+<p class='note warning'><strong>WARNING:</strong>System does not have the ability to import information.</p>

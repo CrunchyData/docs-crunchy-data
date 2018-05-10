@@ -25,7 +25,7 @@ The following table suggests recommendations for configuring plans.
 These recommendations do not accommodate every app.
 However, they provide a starting point for operators to configure their tile.
 
-<%= partial('plan_table') -%>
+<%= partial('plan_table') %>
 
 <p class="note"><strong>Note</strong>: Part of maintaining high availability is having room to grow the database.
    Therefore, operators and developers should consider the rate at which they expect to grow and select an appropriate plan.</p>
@@ -47,7 +47,8 @@ The current limitations for these cluster configurations are as follows:
 - All replicas use `async` replication. `sync` replication is not yet configurable.
 
 ##<a id="backups"></a> Automated Backups
-<%= partial('backup_information') -%>
+
+<%= partial('backup_information') %>
 
 ##<a id="load-balance"></a> Load Balancing
 

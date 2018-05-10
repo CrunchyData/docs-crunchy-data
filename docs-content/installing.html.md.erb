@@ -33,7 +33,7 @@ To make Crunchy PostgreSQL highly available, you must balance the service across
 
 1. Choose AZ to balance jobs. This should be a private service network with a route to a public gateway. Crunchy Data recommends two or more AZs when possible.
 
-1. Choose the primary network where the `On-Demand Broker` will be deployed.
+1. Choose the primary network where the On-Demand Broker will be deployed.
 
 1. Choose the service network that On-Demand Broker will use to deploy VMs. This is a private service network with a route to a public gateway.
 
@@ -65,7 +65,7 @@ To make Crunchy PostgreSQL highly available, you must balance the service across
 
 The plans made available to developers must be configured prior to deployment. The following table can be used as a baseline when configuring the plans for use:
 
-<%= partial('plan_table') -%>
+<%= partial('plan_table') %>
 
 <p class="note"><strong>Note:</strong> Do not set any PostgreSQL or pgBackrest VMs to less than 4&nbsp;GB of memory.</p>
 <p class="note"><strong>Note:</strong> Do not set any PostgreSQL or pgBackrest VMs to fewer than 2 cores.</p>
@@ -74,25 +74,25 @@ The plans made available to developers must be configured prior to deployment. T
 
 ![Small Plan Properties](small-plan-properties.png)
 
-<%= partial(:plan_configuration, :locals => {:plan_size => 'small'}) -%>
+<%= partial(:plan_configuration, :locals => {:plan_size => 'small'}) %>
 
 ####<a id='medium-plan'></a> Configure Medium Plan Properties
 
 ![Medium Plan Properties](medium-plan-properties.png)
 
-<%= partial(:plan_configuration, :locals => {:plan_size => 'medium'}) -%>
+<%= partial(:plan_configuration, :locals => {:plan_size => 'medium'}) %>
 
 ####<a id='large-plan'></a> Configure Large Plan Properties
 
 ![Large Plan Properties](large-plan-properties.png)
 
-<%= partial(:plan_configuration, :locals => {:plan_size => 'large'}) -%>
+<%= partial(:plan_configuration, :locals => {:plan_size => 'large'}) %>
 
 ####<a id='extra-large-plan'></a> Extra-Large Plan Properties
 
 ![Extra-Large Plan Properties](extra-large-plan-properties.png)
 
-<%= partial(:plan_configuration, :locals => {:plan_size => 'extra-large'}) -%>
+<%= partial(:plan_configuration, :locals => {:plan_size => 'extra-large'}) %>
 
 ###<a id='errands'></a> Configure Errands
 
