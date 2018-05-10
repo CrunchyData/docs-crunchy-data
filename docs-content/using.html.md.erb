@@ -6,7 +6,9 @@ owner: Crunchy Data
 This topic describes how to use Crunchy PostgreSQL for Pivotal Cloud Foundry (PCF) Tile.
 
 ##<a id='using'></a> Crunchy PostgreSQL Service
+
 Crunchy PostgreSQL for Pivotal Cloud Foundry (PCF) Tile is an on-demand, single-tenant PostgreSQL database service.
+
 Crunchy PostgreSQL comes with one service:
 
 * postgresql-9.5-odb
@@ -19,6 +21,7 @@ This service includes:
 * Consul cluster
 
 ###<a id='service-info'></a> PostgreSQL Plans
+
 The `postgresql-9.5-odb` service comes with several plans:
 
 - `small`
@@ -26,15 +29,15 @@ The `postgresql-9.5-odb` service comes with several plans:
 - `large`
 - `extra-large`
 
-Each plan corresponds to different server size set up by the operator when the
-service was deployed.
+Each plan corresponds to different server size set up by the operator when the service was deployed.
 
 Review each plan offering and choose the correct database size for the application.
+
 ###<a id='viewing-service-plans'></a> Viewing Service Plans in Cloud Foundry
+
 #### Using Cloud Foundry CLI
 
-Run `cf marketplace -s postgresql-9.5-odb`. This will display
-information about each service plan offered by the Crunchy
+Run `cf marketplace -s postgresql-9.5-odb`. This will display information about each service plan offered by the Crunchy
 service. Choose the plan that best fits your application requirements.
 
 #### Using Pivotal Apps Manager
@@ -46,48 +49,61 @@ services.
 application requirements.
 
 ##<a id='creating'></a> Creating PostgreSQL Service
-###<a id='parameters'></a> Service Creation Parameters
-<%= partial('parameters') -%>
 
-<%= partial('pgc_params') -%>
+###<a id='parameters'></a> Service Creation Parameters
+
+<%= partial('parameters') %>
+
+<%= partial('pgc_params') %>
 
 ###<a id='create-new'></a> Creating a New Service
-<%= partial('creating_service') -%>
+
+<%= partial('creating_service') %>
 
 ##<a id='updating'></a> Updating an On-Demand Service
+
 ###<a id='updating-params'></a> Configuration Parameters
+
 <%= partial 'updating_params' %>
 
 ###<a id='updating-examples'></a> Updating an Existing Service
-<%= partial 'updating_examples' -%>
+
+<%= partial 'updating_examples' %>
 
 ##<a id='integration'></a> Integrating Applications
 
-The following sections provide information on integrating an application with
-a newly created service.
+The following sections provide information on integrating an application with a newly created service.
 
 ###<a id='binding-key'></a> Service Bindings and Service Keys
-<%= partial('binding_vs_key') -%>
+
+<%= partial('binding_vs_key') %>
 
 ###<a id='service-credentials'></a> Service Credentials
-<%= partial('service_credentials') -%>
+
+<%= partial('service_credentials') %>
 
 ###<a id='binding'></a> Binding a PCF App to a Service
-<%= partial('binding') -%>
+
+<%= partial('binding') %>
 
 ###<a id='unbinding'></a> Unbinding a PCF App from a Service
-<%= partial('unbinding') -%>
+
+<%= partial('unbinding') %>
 
 ###<a id='service_keys'></a> Managing Service Keys
-<%= partial('service_keys') -%>
+
+<%= partial('service_keys') %>
 
 ##<a id='deleting'></a> Deleting a Service
-<%= partial('deleting') -%>
+
+<%= partial('deleting') %>
 
 ##<a id='appendix'></a> Appendix
+
 ###<a id='compliance'></a> Security and Compliance
-<%= partial('compliance_profiles') -%>
+
+<%= partial('compliance_profiles') %>
 
 ###<a id='pgbackrest'></a> pgBackrest Documentation
-For more information about pgBackrest restorations, please refer to the
-official [PGBackRest documentation](http://www.pgbackrest.org/user-guide.html).
+
+For more information about pgBackrest restorations, please refer to the official [PGBackRest documentation](http://www.pgbackrest.org/user-guide.html).
