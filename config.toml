@@ -1,0 +1,69 @@
+baseURL = ""
+
+canonifyurls = true
+DefaultContentLanguage = "current"
+languageCode = "en-us"
+relativeURLs = true
+disablePathToLower = true
+
+title = "Crunchy PostgreSQL for Pivotal Cloud Foundry"
+theme = "crunchy-hugo-theme"
+#themesdir = "themes/"
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+publishDir = ""
+
+defaultContentLanguage = "current"
+defaultContentLanguageInSubdir= true
+enableMissingTranslationPlaceholders = true
+
+[Languages]
+[Languages.current]
+title = "Crunchy PostgreSQL for Pivotal Cloud Foundry"
+weight = 1
+languageName = "current"
+
+[params]
+showVisitedLinks = false # default is false
+themeStyle = "flex" # "original" or "flex" # default "flex"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-bookmark'></i> <label>Pivotal Cloud Foundry</label>"
+url = "https://docs.pivotal.io/"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-book'></i> <label>Pivotal Partner Documentation</label>"
+url = "https://docs.pivotal.io/partners/crunchy/index.html"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-file-contract'></i> <label>License</label>"
+url = "/LEGAL.txt"
+weight = 30
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-copy'></i> <label>View All Documentation</label>"
+url = "https://access.crunchydata.com/documentation"
+weight = 40
+
+[[menu.downloads]]
+name = "<i class='fas fa-file-pdf'></i> <label>PDF</label>"
+url = "/pdf/crunchy-postgresql-for-pcf.pdf"
+weight = 20
+
+[[menu.downloads]]
+name = "<i class='fas fa-book'></i> <label>EPUB</label>"
+url = "/epub/crunchy-postgresql-for-pcf.epub"
+weight = 30
