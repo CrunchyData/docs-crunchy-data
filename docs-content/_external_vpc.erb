@@ -1,9 +1,0 @@
-In order to connect to an on-demand service from an external VPC, you must
-ensure that the external VPC and PaaS VPC are peered. This process allows
-traffic to be routed between VPCs. You may see connection timeout or connection
-refused errors if the VPCs are not peered.
-
-Additionally, the client IP address or subnet must be added to the `pg_hba`
-configuration of the service instance. This can be accomplished during service
-creation with the `hba_addresses` parameter or during service update with the
-`add_hba_addresses` parameter.
